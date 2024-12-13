@@ -73,7 +73,7 @@ public class MembreDAOImpl implements MembreDAO {
         }
         return id;
     }
-    public Set<Membre> chargerListeMembre(String nomFichier) {
+    public Set<Membre> chargerListeMembre(String nomFichier) throws SQLException, ClassNotFoundException {
         Set<Membre> membres = new HashSet<>();
         if (!nomFichier.endsWith(".csv")) {
             System.out.println("The file is not a CSV file.");
@@ -90,7 +90,7 @@ public class MembreDAOImpl implements MembreDAO {
                     String phone = data[3].trim();
 
 
-                    Membre membre = new Membre(nom, null, prenom, email, phone);
+                    Membre membre = new Membre(nom, prenom, email, phone);
                     membres.add(membre);
                 }
             }

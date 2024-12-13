@@ -28,6 +28,13 @@ public class Membre {
         this.phone = phone;
     }
 
+    public Membre(String nom, String prenom, String email, String phone) {
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+        this.phone = phone;
+    }
+
     public String getIdentifiant() {
         return identifiant;
     }
